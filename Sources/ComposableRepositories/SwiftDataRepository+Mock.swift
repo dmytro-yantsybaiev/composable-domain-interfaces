@@ -2,15 +2,11 @@ import SwiftData
 
 extension SwiftDataRepository {
 
-    public static func mock(
-        insert: @escaping (Model) throws -> Void = { _ in },
-        delete: @escaping (Model) throws -> Void = { _ in },
-        fetch: @escaping (FetchDescriptor<Model>) throws -> [Model] = { _ in [] }
-    ) -> SwiftDataRepository<Model> {
+    public static var mock: SwiftDataRepository<Model> {
         SwiftDataRepository<Model>(
-            insert: insert,
-            delete: delete,
-            fetch: fetch
+            insert: { _ in },
+            delete: { _ in },
+            fetch: { _ in [] }
         )
     }
 }
