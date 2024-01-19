@@ -1,1 +1,1 @@
-# The Composable Domain Interfaces
+# The Composable Domain
