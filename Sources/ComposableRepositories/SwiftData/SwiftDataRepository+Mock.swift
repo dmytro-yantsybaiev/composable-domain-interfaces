@@ -1,9 +1,9 @@
 import SwiftData
 
-extension SwiftDataRepository {
+extension RepositorySwiftData {
 
-    public static var mock: SwiftDataRepository<Model> {
-        SwiftDataRepository<Model>(
+    public static var mock: RepositorySwiftData<Model> {
+        RepositorySwiftData<Model>(
             insert: { _ in },
             delete: { _ in },
             fetch: { _ in [] }

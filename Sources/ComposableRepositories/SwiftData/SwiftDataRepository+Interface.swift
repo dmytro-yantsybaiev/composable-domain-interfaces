@@ -1,6 +1,6 @@
 import SwiftData
 
-public struct SwiftDataRepository<Model> where Model: PersistentModel {
+public struct RepositorySwiftData<Model> where Model: PersistentModel {
 
     public var insert: (Model) throws -> Void
     public var delete: (Model) throws -> Void

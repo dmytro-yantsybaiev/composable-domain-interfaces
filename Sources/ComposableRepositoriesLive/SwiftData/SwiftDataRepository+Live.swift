@@ -1,11 +1,11 @@
 import SwiftData
 import ComposableRepositories
 
-extension SwiftDataRepository {
+extension RepositorySwiftData {
 
     @MainActor
-    public static func live(modelContainer: ModelContainer) -> SwiftDataRepository {
-        SwiftDataRepository(
+    public static func live(modelContainer: ModelContainer) -> RepositorySwiftData {
+        RepositorySwiftData(
             insert: { model in
                 modelContainer.mainContext.insert(model)
                 try modelContainer.mainContext.save()
